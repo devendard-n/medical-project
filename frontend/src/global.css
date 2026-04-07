@@ -1,0 +1,536 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+.app-layout {
+  min-height: calc(100vh - 64px);
+}
+
+.main {
+  min-height: calc(100vh - 64px);
+  padding: 24px;
+  background: #f8fafc;
+  overflow-y: auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  height: 64px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.15);
+}
+
+.navbar h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar a,
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.navbar a:hover,
+.nav-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* =========================
+   COMMON PAGE HELPERS
+========================= */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-title,
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.2);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.primary-btn {
+  background: #2563eb;
+}
+
+.edit-btn {
+  background: #f59e0b;
+}
+
+.edit-btn:hover {
+  background: #d97706;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+
+.print-btn {
+  background: #10b981;
+}
+
+.print-btn:hover {
+  background: #059669;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+select,
+textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 11px 13px;
+  font-size: 14px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  padding: 20px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* =========================
+   CHATBOT PAGE
+========================= */
+.chat-fullpage {
+  height: calc(100vh - 64px - 48px);
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.chat-header {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.msg {
+  max-width: 70%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  line-height: 1.5;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.msg.user {
+  align-self: flex-end;
+  background: #2563eb;
+  color: #ffffff;
+  border-bottom-right-radius: 6px;
+}
+
+.msg.bot {
+  align-self: flex-start;
+  background: #e2e8f0;
+  color: #0f172a;
+  border-bottom-left-radius: 6px;
+}
+
+.chat-footer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+}
+
+.chat-footer input {
+  flex: 1;
+}
+
+.chat-footer button {
+  min-width: 110px;
+}
+
+/* =========================
+   INVENTORY PAGE
+========================= */
+.inventory-page,
+.billing-page,
+.history-page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.inventory-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.inventory-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.inventory-form input {
+  min-width: 170px;
+  flex: 1 1 180px;
+}
+
+.inventory-form button {
+  align-self: stretch;
+}
+
+/* =========================
+   BILLING PAGE
+========================= */
+.patient-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.patient-box input {
+  flex: 1 1 220px;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 320px;
+}
+
+.suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.suggestion-item {
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s ease;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover {
+  background: #eff6ff;
+}
+
+/* =========================
+   HISTORY PAGE
+========================= */
+.bill-card {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.bill-card h3 {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   TABLES
+========================= */
+table,
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+th {
+  background: #2563eb;
+  color: #ffffff;
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+td {
+  padding: 14px 16px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+table input {
+  width: 80px;
+  padding: 8px 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.low-stock td,
+tr.low-stock td {
+  background: #fef2f2;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  color: #64748b;
+  padding: 22px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .navbar h2 {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .main {
+    padding: 16px;
+  }
+
+  .msg {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    height: auto;
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .container,
+  .inventory-page,
+  .billing-page,
+  .history-page {
+    max-width: 100%;
+  }
+
+  .main {
+    min-height: calc(100vh - 90px);
+  }
+
+  .chat-fullpage {
+    height: calc(100vh - 90px - 32px);
+    min-height: 420px;
+    border-radius: 14px;
+  }
+
+  .chat-footer {
+    flex-direction: column;
+  }
+
+  .chat-footer button {
+    width: 100%;
+  }
+
+  .inventory-form,
+  .patient-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .suggestions {
+    max-width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

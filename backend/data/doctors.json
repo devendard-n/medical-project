@@ -1,0 +1,79 @@
+[
+  {
+    "id": "d1",
+    "name": "Dr Arjun",
+    "specialization": "Cardiologist",
+    "availableTimes": ["09:00", "10:00", "11:00"]
+  },
+  {
+    "id": "d2",
+    "name": "Dr Meera",
+    "specialization": "Cardiologist",
+    "availableTimes": ["12:00", "14:00", "16:00"]
+  },
+
+  {
+    "id": "d3",
+    "name": "Dr Kavitha",
+    "specialization": "Dermatologist",
+    "availableTimes": ["09:30", "11:30", "13:00"]
+  },
+  {
+    "id": "d4",
+    "name": "Dr Rahul",
+    "specialization": "Dermatologist",
+    "availableTimes": ["14:00", "15:30", "17:00"]
+  },
+
+  {
+    "id": "d5",
+    "name": "Dr Suresh",
+    "specialization": "Gastroenterologist",
+    "availableTimes": ["09:00", "10:30", "12:00"]
+  },
+  {
+    "id": "d6",
+    "name": "Dr Anita",
+    "specialization": "Gastroenterologist",
+    "availableTimes": ["13:30", "15:00", "16:30"]
+  },
+
+  {
+    "id": "d7",
+    "name": "Dr Karthik",
+    "specialization": "Orthopedic",
+    "availableTimes": ["09:00", "11:00", "13:00"]
+  },
+  {
+    "id": "d8",
+    "name": "Dr Priyanka",
+    "specialization": "Orthopedic",
+    "availableTimes": ["14:00", "15:30", "17:00"]
+  },
+
+  {
+    "id": "d9",
+    "name": "Dr Ramesh",
+    "specialization": "Neurologist",
+    "availableTimes": ["09:30", "11:00", "12:30"]
+  },
+  {
+    "id": "d10",
+    "name": "Dr Divya",
+    "specialization": "Neurologist",
+    "availableTimes": ["14:00", "16:00", "17:30"]
+  },
+
+  {
+    "id": "d11",
+    "name": "Dr Kumar",
+    "specialization": "General Physician",
+    "availableTimes": ["09:00", "10:00", "11:00"]
+  },
+  {
+    "id": "d12",
+    "name": "Dr Lakshmi",
+    "specialization": "General Physician",
+    "availableTimes": ["12:00", "14:00", "15:30"]
+  }
+]

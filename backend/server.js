@@ -1,0 +1,23 @@
+const express = require("express")
+const cors = require("cors")
+
+const app = express()
+
+app.use(cors())
+app.use(express.json())
+
+// Routes
+app.use("/chatbot", require("./routes/chatbot"))
+app.use("/doctors", require("./routes/doctors"))
+app.use("/appointments", require("./routes/appointments"))
+app.use("/admin", require("./routes/admin"))
+
+app.get("/", (req, res) => {
+  res.send("API is running...")
+})
+
+const PORT = 5000
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`)
+})
